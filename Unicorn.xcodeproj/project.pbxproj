@@ -18,6 +18,11 @@
 		4964A345194F3FA20026044D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4964A324194F3FA20026044D /* Cocoa.framework */; };
 		4964A34D194F3FA20026044D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4964A34B194F3FA20026044D /* InfoPlist.strings */; };
 		4964A34F194F3FA20026044D /* UnicornTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4964A34E194F3FA20026044D /* UnicornTests.m */; };
+		4964A36D19571A960026044D /* HGBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 4964A36519571A960026044D /* HGBeacon.m */; };
+		4964A36E19571A960026044D /* HGBeaconScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 4964A36719571A960026044D /* HGBeaconScanner.m */; };
+		4964A36F19571A960026044D /* HGBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4964A36919571A960026044D /* HGBeaconViewController.m */; };
+		4964A37019571A960026044D /* HGDateValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4964A36B19571A960026044D /* HGDateValueTransformer.m */; };
+		A9EECA17E89E487684F0D403 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87DE2805B80E45D5936D9E80 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D69870CA00A43EA97FD1823 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		4964A321194F3FA20026044D /* Unicorn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unicorn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4964A324194F3FA20026044D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		4964A327194F3FA20026044D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -50,6 +56,16 @@
 		4964A34A194F3FA20026044D /* UnicornTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnicornTests-Info.plist"; sourceTree = "<group>"; };
 		4964A34C194F3FA20026044D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4964A34E194F3FA20026044D /* UnicornTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnicornTests.m; sourceTree = "<group>"; };
+		4964A36119571A960026044D /* BeaconScanner-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BeaconScanner-Prefix.pch"; sourceTree = "<group>"; };
+		4964A36419571A960026044D /* HGBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGBeacon.h; sourceTree = "<group>"; };
+		4964A36519571A960026044D /* HGBeacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGBeacon.m; sourceTree = "<group>"; };
+		4964A36619571A960026044D /* HGBeaconScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGBeaconScanner.h; sourceTree = "<group>"; };
+		4964A36719571A960026044D /* HGBeaconScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGBeaconScanner.m; sourceTree = "<group>"; };
+		4964A36819571A960026044D /* HGBeaconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGBeaconViewController.h; sourceTree = "<group>"; };
+		4964A36919571A960026044D /* HGBeaconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGBeaconViewController.m; sourceTree = "<group>"; };
+		4964A36A19571A960026044D /* HGDateValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGDateValueTransformer.h; sourceTree = "<group>"; };
+		4964A36B19571A960026044D /* HGDateValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGDateValueTransformer.m; sourceTree = "<group>"; };
+		87DE2805B80E45D5936D9E80 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +74,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4964A325194F3FA20026044D /* Cocoa.framework in Frameworks */,
+				A9EECA17E89E487684F0D403 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +97,7 @@
 				4964A348194F3FA20026044D /* UnicornTests */,
 				4964A323194F3FA20026044D /* Frameworks */,
 				4964A322194F3FA20026044D /* Products */,
+				3D69870CA00A43EA97FD1823 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,6 +116,7 @@
 				4964A324194F3FA20026044D /* Cocoa.framework */,
 				4964A343194F3FA20026044D /* XCTest.framework */,
 				4964A326194F3FA20026044D /* Other Frameworks */,
+				87DE2805B80E45D5936D9E80 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -115,6 +134,15 @@
 		4964A32A194F3FA20026044D /* Unicorn */ = {
 			isa = PBXGroup;
 			children = (
+				4964A36119571A960026044D /* BeaconScanner-Prefix.pch */,
+				4964A36419571A960026044D /* HGBeacon.h */,
+				4964A36519571A960026044D /* HGBeacon.m */,
+				4964A36619571A960026044D /* HGBeaconScanner.h */,
+				4964A36719571A960026044D /* HGBeaconScanner.m */,
+				4964A36819571A960026044D /* HGBeaconViewController.h */,
+				4964A36919571A960026044D /* HGBeaconViewController.m */,
+				4964A36A19571A960026044D /* HGDateValueTransformer.h */,
+				4964A36B19571A960026044D /* HGDateValueTransformer.m */,
 				4964A336194F3FA20026044D /* UNIAppDelegate.h */,
 				4964A337194F3FA20026044D /* UNIAppDelegate.m */,
 				4964A339194F3FA20026044D /* MainMenu.xib */,
@@ -161,9 +189,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4964A352194F3FA20026044D /* Build configuration list for PBXNativeTarget "Unicorn" */;
 			buildPhases = (
+				1AAB7688EC774C20BA052563 /* Check Pods Manifest.lock */,
 				4964A31D194F3FA20026044D /* Sources */,
 				4964A31E194F3FA20026044D /* Frameworks */,
 				4964A31F194F3FA20026044D /* Resources */,
+				2840C60DAEE14CFF92642D16 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -248,13 +278,50 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1AAB7688EC774C20BA052563 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2840C60DAEE14CFF92642D16 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4964A31D194F3FA20026044D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4964A37019571A960026044D /* HGDateValueTransformer.m in Sources */,
+				4964A36D19571A960026044D /* HGBeacon.m in Sources */,
+				4964A36F19571A960026044D /* HGBeaconViewController.m in Sources */,
 				4964A331194F3FA20026044D /* main.m in Sources */,
 				4964A338194F3FA20026044D /* UNIAppDelegate.m in Sources */,
+				4964A36E19571A960026044D /* HGBeaconScanner.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +451,7 @@
 		};
 		4964A353194F3FA20026044D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D69870CA00A43EA97FD1823 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -397,6 +465,7 @@
 		};
 		4964A354194F3FA20026044D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D69870CA00A43EA97FD1823 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -467,6 +536,7 @@
 				4964A354194F3FA20026044D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4964A355194F3FA20026044D /* Build configuration list for PBXNativeTarget "UnicornTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +545,7 @@
 				4964A357194F3FA20026044D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
