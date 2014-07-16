@@ -7,6 +7,7 @@
 //
 #import <Foundation/Foundation.h>
 #import "ReactiveCocoa/ReactiveCocoa.h"
+#import <RestKit/RestKit.h>
 
 /**
  *  State unknown, update imminent.
@@ -55,6 +56,11 @@ extern NSString *const HGBeaconScannerBluetoothStatePoweredOn;
  *  defined above when bluetooth state changes
  */
 @property (nonatomic, readonly) NSString *const bluetoothState;
+/**
+ *  RKObjectManager for RestKit usage
+ *  defined to contact with Unicorn-service
+ */
+@property (nonatomic, strong) RKObjectManager *objectManager;
 
 @property (nonatomic, readonly) BOOL scanning;
 /**

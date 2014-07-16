@@ -22,6 +22,7 @@
 		4964A36E19571A960026044D /* HGBeaconScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 4964A36719571A960026044D /* HGBeaconScanner.m */; };
 		4964A36F19571A960026044D /* HGBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4964A36919571A960026044D /* HGBeaconViewController.m */; };
 		4964A37019571A960026044D /* HGDateValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4964A36B19571A960026044D /* HGDateValueTransformer.m */; };
+		49ADD2261973580300E9A5E6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 49ADD2251973580300E9A5E6 /* Podfile */; };
 		A9EECA17E89E487684F0D403 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87DE2805B80E45D5936D9E80 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		4964A36919571A960026044D /* HGBeaconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGBeaconViewController.m; sourceTree = "<group>"; };
 		4964A36A19571A960026044D /* HGDateValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGDateValueTransformer.h; sourceTree = "<group>"; };
 		4964A36B19571A960026044D /* HGDateValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGDateValueTransformer.m; sourceTree = "<group>"; };
+		49ADD2251973580300E9A5E6 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		87DE2805B80E45D5936D9E80 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -93,6 +95,7 @@
 		4964A318194F3FA20026044D = {
 			isa = PBXGroup;
 			children = (
+				49ADD2251973580300E9A5E6 /* Podfile */,
 				4964A32A194F3FA20026044D /* Unicorn */,
 				4964A348194F3FA20026044D /* UnicornTests */,
 				4964A323194F3FA20026044D /* Frameworks */,
@@ -261,6 +264,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49ADD2261973580300E9A5E6 /* Podfile in Resources */,
 				4964A32F194F3FA20026044D /* InfoPlist.strings in Resources */,
 				4964A33D194F3FA20026044D /* Images.xcassets in Resources */,
 				4964A335194F3FA20026044D /* Credits.rtf in Resources */,

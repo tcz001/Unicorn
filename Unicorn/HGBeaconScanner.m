@@ -42,7 +42,7 @@ NSString *const HGBeaconScannerBluetoothStatePoweredOn = @"HGBeaconScannerBlueto
         
         self.beaconSignal = [RACReplaySubject replaySubjectWithCapacity:1];
         self.bluetoothStateSignal = [RACReplaySubject replaySubjectWithCapacity:1];
-        
+        self.objectManager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:@"http://localhost:3000"]];
     }
     return self;
 }
@@ -129,12 +129,37 @@ NSString *const HGBeaconScannerBluetoothStatePoweredOn = @"HGBeaconScannerBlueto
                   RSSI:(NSNumber *)RSSI {
     HGBeacon *beacon = [HGBeacon beaconWithAdvertismentDataDictionary:advertisementData];
     beacon.RSSI = RSSI;
+    
     if (beacon) {
-        NSLog(@"Find ibeacon: %@", beacon.proximityUUID);
+        NSLog(@"Find ibeacon: %@", beacon.proximityUUID.UUIDString);
         NSLog(@"major : %@", beacon.major);
         NSLog(@"minor : %@", beacon.minor);
         NSLog(@"measuredPower : %@", beacon.measuredPower);
         NSLog(@"RSSI : %@", beacon.RSSI);
+        
+        
+        RKObjectMapping *responseMapping = [RKObjectMapping mappingForClass:[HGBeacon class]];
+        [responseMapping addAttributeMappingsFromArray:@[@"proximityUUID.UUIDString", @"major", @"minor"]];
+        NSIndexSet *statusCodes = RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful); // Anything in 2xx
+        RKResponseDescriptor *articleDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:responseMapping method:RKRequestMethodAny pathPattern:@"/articles" keyPath:@"article" statusCodes:statusCodes];
+        
+        RKObjectMapping *requestMapping = [RKObjectMapping requestMapping]; // objectClass == NSMutableDictionary
+        [requestMapping addAttributeMappingsFromArray:@[@"proximityUUID.UUIDString", @"major", @"minor"]];
+        
+        // For any object of class Article, serialize into an NSMutableDictionary using the given mapping and nest
+        // under the 'article' key path
+        RKRequestDescriptor *requestDescriptor = [RKRequestDescriptor requestDescriptorWithMapping:requestMapping objectClass:[HGBeacon class] rootKeyPath:@"beacons" method:RKRequestMethodAny];
+        
+        RKObjectManager *manager = self.objectManager;
+                                    [manager addRequestDescriptor:requestDescriptor];
+                                    [manager addResponseDescriptor:articleDescriptor];
+        
+                                    // POST to create
+                                    [manager postObject:beacon path:@"/beacons" parameters:nil success:nil failure:nil];
+        
+        
+        
+        
         [(RACSubject *)self.beaconSignal sendNext:beacon];
     }
 }
