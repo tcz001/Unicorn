@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49183F381977C04F00CB80A8 /* UNIEngagement.m in Sources */ = {isa = PBXBuildFile; fileRef = 49183F371977C04F00CB80A8 /* UNIEngagement.m */; };
+		49183F3B1977D7A700CB80A8 /* UNIEngageResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 49183F3A1977D7A700CB80A8 /* UNIEngageResponse.m */; };
 		4964A325194F3FA20026044D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4964A324194F3FA20026044D /* Cocoa.framework */; };
 		4964A32F194F3FA20026044D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4964A32D194F3FA20026044D /* InfoPlist.strings */; };
 		4964A331194F3FA20026044D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4964A330194F3FA20026044D /* main.m */; };
@@ -38,6 +40,10 @@
 
 /* Begin PBXFileReference section */
 		3D69870CA00A43EA97FD1823 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		49183F361977C04F00CB80A8 /* UNIEngagement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNIEngagement.h; sourceTree = "<group>"; };
+		49183F371977C04F00CB80A8 /* UNIEngagement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNIEngagement.m; sourceTree = "<group>"; };
+		49183F391977D7A700CB80A8 /* UNIEngageResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNIEngageResponse.h; sourceTree = "<group>"; };
+		49183F3A1977D7A700CB80A8 /* UNIEngageResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNIEngageResponse.m; sourceTree = "<group>"; };
 		4964A321194F3FA20026044D /* Unicorn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unicorn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4964A324194F3FA20026044D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		4964A327194F3FA20026044D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -137,6 +143,10 @@
 		4964A32A194F3FA20026044D /* Unicorn */ = {
 			isa = PBXGroup;
 			children = (
+				49183F391977D7A700CB80A8 /* UNIEngageResponse.h */,
+				49183F3A1977D7A700CB80A8 /* UNIEngageResponse.m */,
+				49183F361977C04F00CB80A8 /* UNIEngagement.h */,
+				49183F371977C04F00CB80A8 /* UNIEngagement.m */,
 				4964A36119571A960026044D /* BeaconScanner-Prefix.pch */,
 				4964A36419571A960026044D /* HGBeacon.h */,
 				4964A36519571A960026044D /* HGBeacon.m */,
@@ -320,6 +330,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49183F3B1977D7A700CB80A8 /* UNIEngageResponse.m in Sources */,
+				49183F381977C04F00CB80A8 /* UNIEngagement.m in Sources */,
 				4964A37019571A960026044D /* HGDateValueTransformer.m in Sources */,
 				4964A36D19571A960026044D /* HGBeacon.m in Sources */,
 				4964A36F19571A960026044D /* HGBeaconViewController.m in Sources */,

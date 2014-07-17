@@ -9,6 +9,8 @@
 #import <CoreLocation/CoreLocation.h>
 #import <IOBluetooth/IOBluetooth.h>
 #import "HGBeacon.h"
+#import "UNIEngagement.h"
+#import "UNIEngageResponse.h"
 #import "libextobjc/EXTScope.h"
 #import "BlocksKit.h"
 
@@ -42,7 +44,7 @@ NSString *const HGBeaconScannerBluetoothStatePoweredOn = @"HGBeaconScannerBlueto
         
         self.beaconSignal = [RACReplaySubject replaySubjectWithCapacity:1];
         self.bluetoothStateSignal = [RACReplaySubject replaySubjectWithCapacity:1];
-        self.objectManager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:@"http://localhost:3000"]];
+        self.objectManager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:@"http://unicorn-service.herokuapp.com"]];
     }
     return self;
 }
@@ -138,24 +140,22 @@ NSString *const HGBeaconScannerBluetoothStatePoweredOn = @"HGBeaconScannerBlueto
         NSLog(@"RSSI : %@", beacon.RSSI);
         
         
-        RKObjectMapping *responseMapping = [RKObjectMapping mappingForClass:[HGBeacon class]];
-        [responseMapping addAttributeMappingsFromArray:@[@"proximityUUID.UUIDString", @"major", @"minor"]];
+        UNIEngagement *engagement = [[UNIEngagement alloc] initWithProximityUUID:beacon.proximityUUID.UUIDString major:beacon.major minor:beacon.minor measuredPower:beacon.measuredPower];
+        RKObjectMapping *responseMapping = [RKObjectMapping mappingForClass:[UNIEngageResponse class]];
+        [responseMapping addAttributeMappingsFromArray:@[@"beacon_id", @"unicorn_id", @"created_at", @"updated_at"]];
         NSIndexSet *statusCodes = RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful); // Anything in 2xx
-        RKResponseDescriptor *articleDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:responseMapping method:RKRequestMethodAny pathPattern:@"/articles" keyPath:@"article" statusCodes:statusCodes];
+        RKResponseDescriptor *engagementDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:responseMapping method:RKRequestMethodAny pathPattern:@"/engage" keyPath:@"" statusCodes:statusCodes];
         
         RKObjectMapping *requestMapping = [RKObjectMapping requestMapping]; // objectClass == NSMutableDictionary
-        [requestMapping addAttributeMappingsFromArray:@[@"proximityUUID.UUIDString", @"major", @"minor"]];
-        
-        // For any object of class Article, serialize into an NSMutableDictionary using the given mapping and nest
-        // under the 'article' key path
-        RKRequestDescriptor *requestDescriptor = [RKRequestDescriptor requestDescriptorWithMapping:requestMapping objectClass:[HGBeacon class] rootKeyPath:@"beacons" method:RKRequestMethodAny];
+        [requestMapping addAttributeMappingsFromArray:@[@"UUID", @"major", @"minor"]];
+        RKRequestDescriptor *requestDescriptor = [RKRequestDescriptor requestDescriptorWithMapping:requestMapping objectClass:[UNIEngagement class] rootKeyPath:@"engage" method:RKRequestMethodAny];
         
         RKObjectManager *manager = self.objectManager;
                                     [manager addRequestDescriptor:requestDescriptor];
-                                    [manager addResponseDescriptor:articleDescriptor];
+                                    [manager addResponseDescriptor:engagementDescriptor];
         
                                     // POST to create
-                                    [manager postObject:beacon path:@"/beacons" parameters:nil success:nil failure:nil];
+                                    [manager postObject:engagement path:@"/engage" parameters:nil success:nil failure:nil];
         
         
         
