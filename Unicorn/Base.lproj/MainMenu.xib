@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6185.7" systemVersion="13E28" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6154.17"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6185.7"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="HGAppDelegate">
@@ -14,6 +14,7 @@
         <customObject id="Voe-Tx-rLC" customClass="UNIAppDelegate">
             <connections>
                 <outlet property="statusMenu" destination="ehp-nb-Qqt" id="Qvs-f8-iMC"/>
+                <outlet property="unicornForm" destination="1DV-Bq-NeS" id="g7P-k8-14S"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="PFi-2C-2wZ"/>
             </connections>
         </customObject>
@@ -27,6 +28,7 @@
                 <outlet property="view" destination="EiT-Mj-1SZ" id="gWO-eF-WTs"/>
             </connections>
         </customObject>
+        <customObject id="Fnt-ru-90I" userLabel="Unicorn View Controller"/>
         <arrayController objectClassName="BCBeacon" editable="NO" id="bR3-4d-4Vy" userLabel="Beacon Array Controller">
             <declaredKeys>
                 <string>major</string>
@@ -879,8 +881,11 @@
                         <action selector="deminiaturize:" target="QvC-M9-y7g" id="S2d-Cd-0Jb"/>
                     </connections>
                 </menuItem>
-                <menuItem title="other" id="LMH-2c-qZH">
+                <menuItem title="Item" id="zn6-9S-bSM">
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <outlet property="view" destination="DhH-fK-gNJ" id="AoL-dP-bzF"/>
+                    </connections>
                 </menuItem>
                 <menuItem title="Quit" keyEquivalent="q" id="7Fc-tS-t8z">
                     <connections>
@@ -889,5 +894,33 @@
                 </menuItem>
             </items>
         </menu>
+        <customView id="DhH-fK-gNJ">
+            <rect key="frame" x="0.0" y="0.0" width="184" height="72"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <form verticalHuggingPriority="750" fixedFrame="YES" mode="track" allowsEmptySelection="NO" autorecalculatesCellSize="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1DV-Bq-NeS">
+                    <rect key="frame" x="19" y="9" width="145" height="52"/>
+                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    <size key="cellSize" width="145" height="22"/>
+                    <size key="intercellSpacing" width="1" height="8"/>
+                    <formCell key="prototype" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="justified" title="user info:" placeholderString="sdadj" id="ziJ-Ju-P3h">
+                        <font key="font" metaFont="system"/>
+                        <font key="titleFont" metaFont="system"/>
+                    </formCell>
+                    <cells>
+                        <column>
+                            <formCell scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="justified" title="Unicorn ID :" placeholderString="enter ID" id="kKv-sU-WGA">
+                                <font key="font" metaFont="system"/>
+                                <font key="titleFont" metaFont="system"/>
+                            </formCell>
+                            <formCell scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="justified" tag="1" title="Status :" id="NfG-aZ-Qjd">
+                                <font key="font" metaFont="system"/>
+                                <font key="titleFont" metaFont="system"/>
+                            </formCell>
+                        </column>
+                    </cells>
+                </form>
+            </subviews>
+        </customView>
     </objects>
 </document>

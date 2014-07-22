@@ -19,9 +19,10 @@
 @property (strong,nonatomic) NSNumber *measuredPower;
 @property (strong,nonatomic) NSNumber *RSSI;
 @property (strong,nonatomic) NSDate *lastUpdated;
+@property (strong,nonatomic) NSString *unicorn_id;
 - (id)initWithProximityUUID:(NSString *)UUID
                       major:(NSNumber *)major
                       minor:(NSNumber *)minor
-              measuredPower:(NSNumber *)power;
-
+              measuredPower:(NSNumber *)power
+                 unicorn_id:(NSString *)unicorn_id;
 @end

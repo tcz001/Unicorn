@@ -140,14 +140,14 @@ NSString *const HGBeaconScannerBluetoothStatePoweredOn = @"HGBeaconScannerBlueto
         NSLog(@"RSSI : %@", beacon.RSSI);
         
         
-        UNIEngagement *engagement = [[UNIEngagement alloc] initWithProximityUUID:beacon.proximityUUID.UUIDString major:beacon.major minor:beacon.minor measuredPower:beacon.measuredPower];
+        UNIEngagement *engagement = [[UNIEngagement alloc] initWithProximityUUID:beacon.proximityUUID.UUIDString major:beacon.major minor:beacon.minor measuredPower:beacon.measuredPower unicorn_id:self.unicorn_id];
         RKObjectMapping *responseMapping = [RKObjectMapping mappingForClass:[UNIEngageResponse class]];
         [responseMapping addAttributeMappingsFromArray:@[@"beacon_id", @"unicorn_id", @"created_at", @"updated_at"]];
         NSIndexSet *statusCodes = RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful); // Anything in 2xx
         RKResponseDescriptor *engagementDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:responseMapping method:RKRequestMethodAny pathPattern:@"/engage" keyPath:@"" statusCodes:statusCodes];
         
         RKObjectMapping *requestMapping = [RKObjectMapping requestMapping]; // objectClass == NSMutableDictionary
-        [requestMapping addAttributeMappingsFromArray:@[@"UUID", @"major", @"minor"]];
+        [requestMapping addAttributeMappingsFromArray:@[@"UUID", @"major", @"minor", @"unicorn_id"]];
         RKRequestDescriptor *requestDescriptor = [RKRequestDescriptor requestDescriptorWithMapping:requestMapping objectClass:[UNIEngagement class] rootKeyPath:@"engage" method:RKRequestMethodAny];
         
         RKObjectManager *manager = self.objectManager;

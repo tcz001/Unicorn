@@ -39,8 +39,8 @@ extern NSString *const HGBeaconScannerBluetoothStatePoweredOff;
  */
 extern NSString *const HGBeaconScannerBluetoothStatePoweredOn;
 
-
 @interface HGBeaconScanner : NSObject
+
 /**
  *  Signal that send an HGBeacon to subscribers every time a beacon is detected (or redetected)
  */
@@ -63,6 +63,8 @@ extern NSString *const HGBeaconScannerBluetoothStatePoweredOn;
 @property (nonatomic, strong) RKObjectManager *objectManager;
 
 @property (nonatomic, readonly) BOOL scanning;
+
+@property (nonatomic, copy) NSString *unicorn_id;
 /**
  *  Starts scanning for beacons
  */
