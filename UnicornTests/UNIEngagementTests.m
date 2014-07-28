@@ -8,6 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 #import <XCTest/XCTest.h>
+#import <RestKit/RestKit.h>
+#import <RestKit/Testing.h>
 #import "UNIEngagement.h"
 
 

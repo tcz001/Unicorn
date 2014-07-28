@@ -71,8 +71,12 @@ PODS:
     - ISO8601DateFormatterValueTransformer (~> 0.6.0)
     - RestKit/Support
     - RKValueTransformers (~> 1.1.0)
+  - RestKit/Search (0.23.2):
+    - RestKit/CoreData
   - RestKit/Support (0.23.2):
     - TransitionKit (= 2.1.0)
+  - RestKit/Testing (0.23.2):
+    - RestKit/Network
   - RKValueTransformers (1.1.0)
   - SOCKit (1.1)
   - TransitionKit (2.1.0)
@@ -81,7 +85,9 @@ DEPENDENCIES:
   - BlocksKit (~> 2.0.0)
   - libextobjc
   - ReactiveCocoa (~> 2.1)
-  - RestKit (~> 0.23.1)
+  - RestKit (~> 0.23.2)
+  - RestKit/Search (~> 0.23.2)
+  - RestKit/Testing (~> 0.23.2)
 
 SPEC CHECKSUMS:
   AFNetworking: 80c4e0652b08eb34e25b9c0ff3c82556fe5967b4
