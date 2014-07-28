@@ -40,7 +40,7 @@
 //
 //  Created by Matthew Robinson on 1/11/2013.
 //#import <Foundation/Foundation.h>
-#import "ReactiveCocoa/ReactiveCocoa.h"
+//#import "ReactiveCocoa/ReactiveCocoa.h"
 @interface HGBeacon : NSObject
 
 @property (strong,nonatomic) NSUUID *proximityUUID;

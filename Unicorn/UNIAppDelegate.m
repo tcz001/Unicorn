@@ -14,12 +14,14 @@
 {
     NSForm *uniform = self.unicornForm;
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    uniform.stringValue = [userDefaults stringForKey:@"unicorn_id"];
+    [HGBeaconScanner sharedBeaconScanner].unicorn_id = [userDefaults stringForKey:@"unicorn_id"];
+    [[uniform cellAtIndex:0]setStringValue:[HGBeaconScanner sharedBeaconScanner].unicorn_id];
     self.housekeepingSignal = [RACSignal interval:1 onScheduler:[RACScheduler mainThreadScheduler]];
     [self.housekeepingSignal subscribeNext:^(NSDate *now) {
         if ([[HGBeaconScanner sharedBeaconScanner] scanning]) {
-            [userDefaults setObject:uniform.stringValue forKey:@"unicorn_id"];
             [HGBeaconScanner sharedBeaconScanner].unicorn_id = [[uniform cellAtIndex:0]stringValue];
+            [userDefaults setObject:[HGBeaconScanner sharedBeaconScanner].unicorn_id forKey:@"unicorn_id"];
+            NSLog(@"default value %@",[userDefaults stringForKey:@"unicorn_id"]);
         }
     }];
 

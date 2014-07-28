@@ -19,17 +19,24 @@
 		4964A344194F3FA20026044D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4964A343194F3FA20026044D /* XCTest.framework */; };
 		4964A345194F3FA20026044D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4964A324194F3FA20026044D /* Cocoa.framework */; };
 		4964A34D194F3FA20026044D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4964A34B194F3FA20026044D /* InfoPlist.strings */; };
-		4964A34F194F3FA20026044D /* UnicornTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4964A34E194F3FA20026044D /* UnicornTests.m */; };
 		4964A36D19571A960026044D /* HGBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 4964A36519571A960026044D /* HGBeacon.m */; };
 		4964A36E19571A960026044D /* HGBeaconScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 4964A36719571A960026044D /* HGBeaconScanner.m */; };
 		4964A36F19571A960026044D /* HGBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4964A36919571A960026044D /* HGBeaconViewController.m */; };
 		4964A37019571A960026044D /* HGDateValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4964A36B19571A960026044D /* HGDateValueTransformer.m */; };
 		49ADD2261973580300E9A5E6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 49ADD2251973580300E9A5E6 /* Podfile */; };
+		49EB03BF1985F379008DDAE8 /* UNIEngagementTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EB03BE1985F379008DDAE8 /* UNIEngagementTests.m */; };
 		A9EECA17E89E487684F0D403 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87DE2805B80E45D5936D9E80 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		4964A346194F3FA20026044D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4964A319194F3FA20026044D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4964A320194F3FA20026044D;
+			remoteInfo = Unicorn;
+		};
+		49EB03C01985FE5B008DDAE8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4964A319194F3FA20026044D /* Project object */;
 			proxyType = 1;
@@ -62,7 +69,6 @@
 		4964A343194F3FA20026044D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		4964A34A194F3FA20026044D /* UnicornTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnicornTests-Info.plist"; sourceTree = "<group>"; };
 		4964A34C194F3FA20026044D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		4964A34E194F3FA20026044D /* UnicornTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnicornTests.m; sourceTree = "<group>"; };
 		4964A36119571A960026044D /* BeaconScanner-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BeaconScanner-Prefix.pch"; sourceTree = "<group>"; };
 		4964A36419571A960026044D /* HGBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGBeacon.h; sourceTree = "<group>"; };
 		4964A36519571A960026044D /* HGBeacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGBeacon.m; sourceTree = "<group>"; };
@@ -73,6 +79,7 @@
 		4964A36A19571A960026044D /* HGDateValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGDateValueTransformer.h; sourceTree = "<group>"; };
 		4964A36B19571A960026044D /* HGDateValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGDateValueTransformer.m; sourceTree = "<group>"; };
 		49ADD2251973580300E9A5E6 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		49EB03BE1985F379008DDAE8 /* UNIEngagementTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNIEngagementTests.m; sourceTree = "<group>"; };
 		87DE2805B80E45D5936D9E80 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -180,8 +187,8 @@
 		4964A348194F3FA20026044D /* UnicornTests */ = {
 			isa = PBXGroup;
 			children = (
-				4964A34E194F3FA20026044D /* UnicornTests.m */,
 				4964A349194F3FA20026044D /* Supporting Files */,
+				49EB03BE1985F379008DDAE8 /* UNIEngagementTests.m */,
 			);
 			path = UnicornTests;
 			sourceTree = "<group>";
@@ -221,14 +228,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4964A355194F3FA20026044D /* Build configuration list for PBXNativeTarget "UnicornTests" */;
 			buildPhases = (
+				1457A11BCE9A4E6497165DA1 /* Check Pods Manifest.lock */,
 				4964A33E194F3FA20026044D /* Sources */,
 				4964A33F194F3FA20026044D /* Frameworks */,
 				4964A340194F3FA20026044D /* Resources */,
+				FBA1474839524BC98D6D3F25 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				4964A347194F3FA20026044D /* PBXTargetDependency */,
+				49EB03C11985FE5B008DDAE8 /* PBXTargetDependency */,
 			);
 			name = UnicornTests;
 			productName = UnicornTests;
@@ -293,6 +303,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1457A11BCE9A4E6497165DA1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		1AAB7688EC774C20BA052563 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -309,6 +334,21 @@
 			showEnvVarsInLog = 0;
 		};
 		2840C60DAEE14CFF92642D16 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBA1474839524BC98D6D3F25 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -345,7 +385,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4964A34F194F3FA20026044D /* UnicornTests.m in Sources */,
+				49EB03BF1985F379008DDAE8 /* UNIEngagementTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +396,11 @@
 			isa = PBXTargetDependency;
 			target = 4964A320194F3FA20026044D /* Unicorn */;
 			targetProxy = 4964A346194F3FA20026044D /* PBXContainerItemProxy */;
+		};
+		49EB03C11985FE5B008DDAE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4964A320194F3FA20026044D /* Unicorn */;
+			targetProxy = 49EB03C01985FE5B008DDAE8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -495,6 +540,7 @@
 		};
 		4964A356194F3FA20026044D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D69870CA00A43EA97FD1823 /* Pods.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Unicorn.app/Contents/MacOS/Unicorn";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -517,6 +563,7 @@
 		};
 		4964A357194F3FA20026044D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D69870CA00A43EA97FD1823 /* Pods.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Unicorn.app/Contents/MacOS/Unicorn";
 				COMBINE_HIDPI_IMAGES = YES;

@@ -7,6 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UNIEngageResponse.h"
+#import "HGBeacon.h"
+#import <RestKit/RestKit.h>
 
 @interface UNIEngagement : NSObject
 
@@ -25,4 +28,9 @@
                       minor:(NSNumber *)minor
               measuredPower:(NSNumber *)power
                  unicorn_id:(NSString *)unicorn_id;
+
++ (UNIEngagement *) buildEngagement:(HGBeacon *)beacon
+                         unicorn_id:(NSString *)unicorn_id;
+
++ (void) sendEngageToUnicorn:(UNIEngagement *)engagement;
 @end

@@ -35,7 +35,7 @@
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 	<key>LSUIElement</key>
-	<false/>
+	<true/>
 	<key>CFBundleGetInfoString</key>
 	<string></string>
 </dict>
