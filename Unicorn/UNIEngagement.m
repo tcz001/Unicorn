@@ -32,8 +32,9 @@
 }
 + (void)sendEngageToUnicorn:(UNIEngagement *)engagement
 {
-//    RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:@"http://unicorn-service.herokuapp.com"]];
-    RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:@"http://localhost:3000"]];
+    RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:@"http://unicorn-service.herokuapp.com"]];
+    //For local test:
+    //RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:@"http://localhost:3000"]];
 
     
     RKObjectMapping *responseMapping = [RKObjectMapping mappingForClass:[UNIEngageResponse class]];
