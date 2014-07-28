@@ -57,7 +57,5 @@
         NSLog(@"Operation failed with error: %@", error);
     }];
     [objectRequestOperation start];
-    NSLog(@"%@",objectRequestOperation.HTTPRequestOperation.response);
-//    [objectManager postObject:engagement path:@"/engage" parameters:nil success:nil failure:nil];
 }
 @end
