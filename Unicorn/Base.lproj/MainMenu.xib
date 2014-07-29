@@ -696,7 +696,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="780" height="364"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="780" height="364"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -878,7 +878,7 @@
             <items>
                 <menuItem title="Status" keyEquivalent="s" id="HnT-OF-JzP">
                     <connections>
-                        <action selector="deminiaturize:" target="QvC-M9-y7g" id="S2d-Cd-0Jb"/>
+                        <action selector="bringtofront:" target="Voe-Tx-rLC" id="7nx-HD-Qc0"/>
                     </connections>
                 </menuItem>
                 <menuItem title="Item" id="zn6-9S-bSM">

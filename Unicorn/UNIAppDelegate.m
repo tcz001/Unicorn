@@ -43,4 +43,8 @@
     return YES;
 }
 
+- (IBAction)bringtofront:(id)sender {
+    [self.window makeKeyAndOrderFront:nil];
+    [NSApp activateIgnoringOtherApps:true];
+}
 @end

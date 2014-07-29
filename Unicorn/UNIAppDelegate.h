@@ -21,4 +21,5 @@
 @property (strong, nonatomic) NSStatusItem *statusBar;
 @property (weak) IBOutlet NSForm *unicornForm;
 @property (strong) RACSignal *housekeepingSignal;
+- (IBAction)bringtofront:(id)sender;
 @end
